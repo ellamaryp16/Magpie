@@ -1,4 +1,6 @@
+package com.swcomputersci.Act2;
 import java.util.Scanner;
+
 
 /**
  * A simple class to run the Magpie class.
