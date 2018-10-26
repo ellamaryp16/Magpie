@@ -30,7 +30,7 @@ public class Magpie2
 	 *            the user statement
 	 * @return a response based on the rules given
 	 */
-	public String getResponse(String statement)
+	private String getResponse(String statement)
 	{
 		String response = "";
 		if (statement.indexOf(" no ") >= 0)
@@ -46,15 +46,41 @@ public class Magpie2
 		}
 		else
 		{
-			response = getRandomResponse();
+			response = getAnotherResponse();
 		}
 		return response;
 	}
+private String getAnotherResponse()
+{
+	String response = "";
+	if (statement.indexOf(" cat ") >= 0)
+		(
+				response = "I love cats!!!"
+		)
+	else if (statement.indexOf ("school" )>= 0
+		|| statement.indexOf("class")>=0
+		|| statement.indexOf("student")>=0
+		|| statement.indexOf("college")>=0
+		|| statement.indexOf("homework")>=0
+	(
+			response = "School can be a lot some times."
+	)
+	else
+	(
+			response = getSecondResponse();
+			)
+	return response;
+}
+private String getSecondResponce ()
+{
+	String response = "";
+	if (statement.indexOf("sad")>= 0)
+		|| statement.indexOf ("bad")>=0
+		|| statement.indexOf ("annoying")>=0
+		|| statement.indexOf ("boring")>=0
+		
 
-	/**
-	 * Pick a default response to use if nothing else fits.
-	 * @return a non-committal string
-	 */
+}
 	private String getRandomResponse()
 	{
 		final int NUMBER_OF_RESPONSES = 4;
