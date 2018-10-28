@@ -42,7 +42,7 @@ public class Magpie2
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0)
 		{
-			response = "Tell me more about your family.";
+			response = "Tell me more about your family. Or don't. Actually, please don't.";
 		}
 		else
 		{
@@ -53,9 +53,14 @@ public class Magpie2
 private String getAnotherResponse()
 {
 	String response = "";
-	if (statement.indexOf(" cat ") >= 0)
+	if (statement.indexOf(" pet ") >= 0)
+		|| statement.indexOf(" cat ")>=0
+		|| statement.indexOf(" dog ")>=0
+		|| statement.indexOf(" hamster ")>=0
+		|| statement.indexOf(" guinea pig")>=0
+
 		(
-				response = "I love cats!!!"
+				response = "Fun fact: I am allergic to all mammals including humans!!!"
 		)
 	else if (statement.indexOf ("school" )>= 0
 		|| statement.indexOf("class")>=0
@@ -63,7 +68,7 @@ private String getAnotherResponse()
 		|| statement.indexOf("college")>=0
 		|| statement.indexOf("homework")>=0
 	(
-			response = "School can be a lot some times."
+			response = "Oh worm!"
 	)
 	else
 	(
@@ -78,9 +83,16 @@ private String getSecondResponce ()
 		|| statement.indexOf ("bad")>=0
 		|| statement.indexOf ("annoying")>=0
 		|| statement.indexOf ("boring")>=0
-		
+	(
+			response = "oh? get over it please and thank"
+	)
+	else
+	(
+			response = getThirdResponse ()
+			)
+	return response;
 
-}
+
 	private String getRandomResponse()
 	{
 		final int NUMBER_OF_RESPONSES = 4;
@@ -98,12 +110,14 @@ private String getSecondResponce ()
 		}
 		else if (whichResponse == 2)
 		{
-			response = "Do you really think so?";
+			response = "You really think so?";
 		}
 		else if (whichResponse == 3)
 		{
 			response = "You don't say.";
 		}
+		else if (whichResponse == 4)
+			response = "I diagnose you with: being one corndog short of a pinic."
 
 		return response;
 	}
