@@ -20,7 +20,7 @@ public class Magpie2
 	 */
 	public String getGreeting()
 	{
-		return "Hello, let's talk.";
+		return "Let's have a little chat, shall we?";
 	}
 	
 	/**
@@ -35,7 +35,7 @@ public class Magpie2
 		String response = "";
 		if (statement.indexOf(" no ") >= 0)
 		{
-			response = "Why so negative?";
+			response = "Why so gosh darn negative?";
 		}
 		else if (statement.indexOf("mother") >= 0
 				|| statement.indexOf("father") >= 0
@@ -90,11 +90,11 @@ private String getSecondResponce ()
 		
 		if (whichResponse == 0)
 		{
-			response = "Interesting, tell me more.";
+			response = "Interesting, maybe you should write a book about it and see if anyone cares.";
 		}
 		else if (whichResponse == 1)
 		{
-			response = "Hmmm.";
+			response = "Hmmm. I literally could care less";
 		}
 		else if (whichResponse == 2)
 		{
