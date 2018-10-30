@@ -37,11 +37,13 @@ public class Magpie2 {
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0) {
 			response = "Tell me more about your family. Or don't. Actually, please don't.";
-		} else {
-			response = getAnotherResponse();
+		} else
+			{
+			response = getAnotherResponse(statement);
 		}
 		return response;
 	}
+
 
 	public String getAnotherResponse(String statement) {
 		String response = "";
@@ -58,7 +60,7 @@ public class Magpie2 {
 				|| statement.indexOf("homework") >= 0) {
 			response = "I never had to go to school. I'm an intellectual, unlike you.";
 		} else {
-			response = getSecondResponse();
+			response = getSecondResponse(statement);
 		}
 		return response;
 	}
@@ -81,14 +83,33 @@ public class Magpie2 {
 		{
 			response = "";
 		}
-		{
 
-			response = "";
-		} else {
+		 else {
 
-			response = getRandomResponse();
+			response = getThirdResponse(statement);
 		}
 		return response;
+	}
+	private String getThirdResponse(String statement) {
+		String response = "";
+		if (statement.indexOf("hello") >=0
+				||statement.indexOf(" hi ") >= 0
+				||statement.indexOf(" good morning ")>=0
+				||statement.indexOf(" good afternoon")>=0
+		{
+			response = " Greetings human. ";
+		}
+		else if (statement.indexOf("bye") >=0
+				||statement.indexOf(" see you later ") >=0
+				||statement.indexOf(" adios ") >=0
+				||statement.indexOf(" goodbye ")>=0
+				||	statement.indexOf(" farewell ") >=0)
+		{
+			response = "Bye! Don't ever talk to me again please! "
+		}
+		else{
+			response = getRandomResponse();
+		}
 	}
 
 	private String getRandomResponse() {
@@ -107,7 +128,7 @@ public class Magpie2 {
 		} else if (whichResponse == 3) {
 			response = "You don't say.";
 		} else if (whichResponse == 4)
-			response = "I diagnose you with: being one corndog short of a picnic."
+			response = "I diagnose you with: being one corndog short of a picnic.";
 		{
 			return response;
 		}
