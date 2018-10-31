@@ -19,7 +19,7 @@ public class Magpie2 {
 	 * @return a greeting
 	 */
 	public String getGreeting() {
-		return "Let's have a little chat, shall we?";
+		return "Hello, let's have a little chat, shall we?";
 	}
 
 	/**
@@ -47,10 +47,10 @@ public class Magpie2 {
 
 	public String getAnotherResponse(String statement) {
 		String response = "";
-		if (statement.indexOf(" pet ") >= 0
-				|| statement.indexOf(" cat ") >= 0
-				|| statement.indexOf(" dog ") >= 0
-				|| statement.indexOf(" hamster ") >= 0
+		if (statement.indexOf(" pet") >= 0
+				|| statement.indexOf(" cat") >= 0
+				|| statement.indexOf(" dog") >= 0
+				|| statement.indexOf(" hamster") >= 0
 				|| statement.indexOf(" guinea pig") >= 0)
 			response = "Fun fact: I'm allergic to all animals including humans.";
 		else if (statement.indexOf("school") >= 0
@@ -71,17 +71,17 @@ public class Magpie2 {
 				|| statement.indexOf("bad") >= 0
 				|| statement.indexOf("annoying") >= 0
 				|| statement.indexOf("boring") >= 0
-				|| statement.indexOf (" irritating ")>= 0)
+				|| statement.indexOf ("rude")>= 0)
 		{
 			response = "Oh? I'm going to assume you're talking about yourself.";
-		} else if (statement.indexOf(" happy ") >= 0
-		||statement.indexOf (" delighted ")>= 0
-		||statement.indexOf (" funny ")>= 0
-		||statement.indexOf (" awesome ")>= 0
-				||statement.indexOf (" cool ")>= 0
-				||statement.indexOf (" chill ")>= 0)
+		} else if (statement.indexOf("ok") >= 0
+		||statement.indexOf ("sure")>= 0
+		||statement.indexOf ("sounds good")>= 0
+		||statement.indexOf ("awesome")>= 0
+				||statement.indexOf ("cool")>= 0
+				||statement.indexOf ("yes")>= 0)
 		{
-			response = "";
+			response = "Alrighty then.";
 		}
 
 		 else {
@@ -93,15 +93,15 @@ public class Magpie2 {
 	private String getThirdResponse(String statement) {
 		String response = "";
 		if (statement.indexOf("hello") >= 0
-				|| statement.indexOf(" hi ") >= 0
-				|| statement.indexOf(" good morning ") >= 0
-				|| statement.indexOf(" good afternoon") >= 0) {
+				|| statement.indexOf("hi") >= 0
+				|| statement.indexOf("good morning") >= 0
+				|| statement.indexOf("good afternoon") >= 0) {
 			response = " Greetings human. ";
 		} else if (statement.indexOf("bye") >= 0
-				|| statement.indexOf(" see you later ") >= 0
-				|| statement.indexOf(" adios ") >= 0
-				|| statement.indexOf(" goodbye ") >= 0
-				|| statement.indexOf(" farewell ") >= 0) {
+				|| statement.indexOf(" see you later") >= 0
+				|| statement.indexOf(" adios") >= 0
+				|| statement.indexOf(" goodbye") >= 0
+				|| statement.indexOf(" farewell") >= 0) {
 			response = "Bye! Don't ever talk to me again please! ";
 		} else {
 			response = getRandomResponse();
