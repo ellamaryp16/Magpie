@@ -92,26 +92,23 @@ public class Magpie2 {
 	}
 	private String getThirdResponse(String statement) {
 		String response = "";
-		if (statement.indexOf("hello") >=0
-				||statement.indexOf(" hi ") >= 0
-				||statement.indexOf(" good morning ")>=0
-				||statement.indexOf(" good afternoon")>=0
-		{
+		if (statement.indexOf("hello") >= 0
+				|| statement.indexOf(" hi ") >= 0
+				|| statement.indexOf(" good morning ") >= 0
+				|| statement.indexOf(" good afternoon") >= 0) {
 			response = " Greetings human. ";
-		}
-		else if (statement.indexOf("bye") >=0
-				||statement.indexOf(" see you later ") >=0
-				||statement.indexOf(" adios ") >=0
-				||statement.indexOf(" goodbye ")>=0
-				||	statement.indexOf(" farewell ") >=0)
-		{
-			response = "Bye! Don't ever talk to me again please! "
-		}
-		else{
+		} else if (statement.indexOf("bye") >= 0
+				|| statement.indexOf(" see you later ") >= 0
+				|| statement.indexOf(" adios ") >= 0
+				|| statement.indexOf(" goodbye ") >= 0
+				|| statement.indexOf(" farewell ") >= 0) {
+			response = "Bye! Don't ever talk to me again please! ";
+		} else {
 			response = getRandomResponse();
 		}
-	}
+        return response;
 
+	}
 	private String getRandomResponse() {
 
 		final int NUMBER_OF_RESPONSES = 4;
